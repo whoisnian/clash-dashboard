@@ -70,7 +70,7 @@ export function Proxy (props: ProxyProps) {
 
     const backgroundColor = hasError ? undefined : color
     return (
-        <div className={classnames('proxy-item', { 'proxy-error': hasError }, className)}>
+        <div onClick={speedTest} className={classnames('proxy-item', { 'proxy-error': hasError }, className)}>
             <span className="proxy-type" style={{ backgroundColor }}>{config.type}</span>
             <p className="proxy-name">{config.name}</p>
             <p className="proxy-delay">{delay === 0 ? '-' : `${delay}ms`}</p>
